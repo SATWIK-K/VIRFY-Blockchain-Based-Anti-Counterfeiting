@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VIRY</title>
+    <meta property="og:title" content="Planical modern template" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font"
+    />
+  </head>
+  <body>
+    <link rel="stylesheet" href="css/style.css" />
+    <div>
+      <link href="css/index.css" rel="stylesheet" />
+
+      <div class="home-container">
+        <nav class="navbar-navbar navbar-root-class-name">
+          <a href="index.html" class="navbar-navlink"><span>VIRFY</span></a>
+          <div class="navbar-nav-content">
+            <div class="navbar-nav-links">
+              <a href="napprod.html" class="navbar-link nav-link">
+                Add Product
+              </a>
+              <a href="verprod.html" class="navbar-link1 nav-link">
+                Verify Product
+              </a>
+            </div>
+            <div class="get-started navbar-get-started">
+              <button onclick="connectMetamask()"><span class="navbar-text">Connect Wallet</span></button>
+            </div>
+            <div id="open-mobile-menu" class="navbar-hamburger get-started">
+              <img
+                alt="image"
+                src="public/Icons/hamburger-200h.png"
+                class="navbar-image"
+              />
+            </div>
+          </div>
+          <div id="accountArea" style="color: white;margin: 5px;">Wallet ID will be displayed here
+          <script>
+            //connect metamask
+             //1- connect metamask
+        let account;
+        const connectMetamask = async () => {
+            if(window.ethereum !== "undefined") {
+                const accounts = await ethereum.request({method: "eth_requestAccounts"});
+                account = accounts[0];
+                document.getElementById("accountArea").innerHTML = account;
+            }
+        }
+          </script>
+          </div>
+          <div id="mobile-menu" class="navbar-mobile-menu">
+            <div class="navbar-branding">
+              <img
+                alt="image"
+                src="public/Branding/planical7012-ttpb.svg"
+                class="navbar-image1"
+              />
+              <div id="close-mobile-menu" class="navbar-container">
+                <svg viewBox="0 0 1024 1024" class="navbar-icon">
+                  <path
+                    d="M225.835 286.165l225.835 225.835-225.835 225.835c-16.683 16.683-16.683 43.691 0 60.331s43.691 16.683 60.331 0l225.835-225.835 225.835 225.835c16.683 16.683 43.691 16.683 60.331 0s16.683-43.691 0-60.331l-225.835-225.835 225.835-225.835c16.683-16.683 16.683-43.691 0-60.331s-43.691-16.683-60.331 0l-225.835 225.835-225.835-225.835c-16.683-16.683-43.691-16.683-60.331 0s-16.683 43.691 0 60.331z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+            <div class="navbar-nav-links1">
+              <span class="nav-link">Features</span>
+              <span class="nav-link">Why us</span>
+              <span class="nav-link">Prices</span>
+              <span class="nav-link">Contact</span>
+            </div>
+            <div class="get-started">
+              <span class="navbar-text1">Get started</span>
+            </div>
+          </div>
+          <div>
+            <div class="navbar-container2">
+              <script>
+                    /*
+                Mobile menu - Code Embed
+                */
+
+                /* listenForUrlChangesMobileMenu() makes sure that if you changes pages inside your app,
+                the mobile menu will still work*/
+
+                const listenForUrlChangesMobileMenu = () => {
+                    let url = location.href;
+                    document.body.addEventListener('click', () => {
+                        requestAnimationFrame(() => {
+                            if (url !== location.href) {
+                                runMobileMenuCodeEmbed();
+                                url = location.href;
+                            }
+                        });
+                    },
+                    true
+                    );
+                };
+
+                const runMobileMenuCodeEmbed = () => {
+                    // Mobile menu
+                    const mobileMenu = document.querySelector('#mobile-menu')
+
+                    // Buttons
+                    const closeButton = document.querySelector('#close-mobile-menu')
+                    const openButton = document.querySelector('#open-mobile-menu')
+
+                    // On openButton click, set the mobileMenu position left to -100vw
+                    openButton && openButton.addEventListener('click', function() {
+                        mobileMenu.style.transform = 'translateX(0%)'
+                    })
+
+                    // On closeButton click, set the mobileMenu position to 0vw
+                    closeButton && closeButton.addEventListener('click', function() {
+                        mobileMenu.style.transform = 'translateX(100%)'
+                    })
+                }
+
+                runMobileMenuCodeEmbed()
+                listenForUrlChangesMobileMenu()
+              </script>
+            </div>
+          </div>
+        </nav>
+        <section class="home-section">
+          <div class="home-hero">
+            <div class="home-content">
+              <main class="home-main">
+                <header class="home-header">
+                  <h1 class="home-heading">Blockchain Anti-Counterfeiting</h1>
+                  <span class="home-caption">
+                    The Blockchain-Driven Anti-Counterfeiting System employs a
+                    structured and comprehensive architecture to combat
+                    counterfeiting effectively.
+                  </span>
+                </header>
+                <div class="home-buttons">
+                  <a href="learn.html" class="home-navlink">
+                    <div class="home-get-started button">
+                      <span class="home-text">Learn More</span>
+                    </div>
+                  </a>
+                </div>
+              </main>
+            </div>
+            <img
+              alt="image"
+              src="images/%5Bcitypng.com%5Dethereum%20eth%20white%20logo%20sign%20png%20-%203000x3000-600h.png"
+              class="home-image"
+            />
+            <div class="home-image1">
+              <img
+                alt="image"
+                src="public/SectionImages/heroimage-600w.png"
+                class="home-image2"
+              />
+            </div>
+          </div>
+        </section>
+        <section class="home-section1">
+          <div class="home-cube">
+            <div class="home-top side"></div>
+            <div class="home-front side"></div>
+            <div class="home-left side"></div>
+          </div>
+          <main class="home-pricing">
+            <header class="home-header1">
+              <header class="home-left1">
+                <span class="section-head">THE TEAM</span>
+              </header>
+              <div class="home-right"></div>
+            </header>
+            <div class="home-plans-container">
+              <main class="home-plans">
+                <div class="home-plan">
+                  <div class="home-details">
+                    <div class="home-header2">
+                      <label class="home-name">2OMID0065&nbsp;</label>
+                      <div class="home-pricing1">
+                        <h1 class="home-price">SATWIK</h1>
+                      </div>
+                    </div>
+                    <p class="home-description">
+                      <span>Contribution:</span>
+                      <br />
+                      <br />
+                      <span>Website Development&nbsp;</span>
+                      <br />
+                      <span>Research Paper&nbsp;</span>
+                      <br />
+                      <span>Blockchain Integration</span>
+                      <br />
+                    </p>
+                  </div>
+                </div>
+                <div class="home-plan1">
+                  <div class="home-details1">
+                    <div class="home-header3">
+                      <label class="home-name1">20MID0126</label>
+                      <div class="home-pricing2">
+                        <h1 class="home-price1">GURU LOKESH</h1>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="home-description1">
+                    <span>Contribution:</span>
+                    <br />
+                    <br />
+                    <span>Research Paper analysis&nbsp;</span>
+                    <br />
+                    <span>&nbsp;</span>
+                  </p>
+                </div>
+                <div class="home-plan2">
+                  <div class="home-details2">
+                    <div class="home-header4">
+                      <label class="home-name2">20MID0112</label>
+                      <div class="home-pricing3">
+                        <span class="home-price2">HARSHA</span>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="home-description2">
+                    <span>Contribution:</span>
+                    <br />
+                    <br />
+                    <span>Intergrating Blockchain into the Website&nbsp;</span>
+                    <br />
+                  </p>
+                </div>
+              </main>
+            </div>
+          </main>
+          <div class="home-help"></div>
+        </section>
+        <div>
+          <div class="home-container2">
+            <script>
+                  /*
+              Accordion - Code Embed
+              */
+
+              /* listenForUrlChangesAccordion() makes sure that if you changes pages inside your app,
+              the Accordions will still work*/
+
+              const listenForUrlChangesAccordion = () => {
+                    let url = location.href;
+                    document.body.addEventListener(
+                      'click',
+                      () => {
+                        requestAnimationFrame(() => {
+                          if (url !== location.href) {
+                            runAccordionCodeEmbed();
+                            url = location.href;
+                          }
+                        });
+                      },
+                      true
+                    );
+                  };
+
+
+              const runAccordionCodeEmbed = () => {
+                  const accordionContainers = document.querySelectorAll('[data-role='accordion-container']'); // All accordion containers
+                  const accordionContents = document.querySelectorAll('[data-role='accordion-content']'); // All accordion content
+                  const accordionIcons = document.querySelectorAll('[data-role='accordion-icon']'); // All accordion icons
+
+                  accordionContents.forEach((accordionContent) => {
+                      accordionContent.style.display = 'none'; //Hides all accordion contents
+                  });
+
+                  accordionContainers.forEach((accordionContainer, index) => {
+                      accordionContainer.addEventListener('click', () => {
+                          accordionContents.forEach((accordionContent) => {
+                          accordionContent.style.display = 'none'; //Hides all accordion contents
+                          });
+
+                          accordionIcons.forEach((accordionIcon) => {
+                              accordionIcon.style.transform = 'rotate(0deg)'; // Resets all icon transforms to 0deg (default)
+                          });
+
+                          accordionContents[index].style.display = 'flex'; // Shows accordion content
+                          accordionIcons[index].style.transform = 'rotate(180deg)'; // Rotates accordion icon 180deg
+                      });
+                  });
+              }
+
+              runAccordionCodeEmbed()
+              listenForUrlChangesAccordion()
+
+              /*
+              Here's what the above is doing:
+                  1. Selects all accordion containers, contents, and icons
+                  2. Hides all accordion contents
+                  3. Adds an event listener to each accordion container
+                  4. When an accordion container is clicked, it:
+                      - Hides all accordion contents
+                      - Resets all icon transforms to 0deg (default)
+                      - Checks if this container has class 'accordion-open'
+                          - If it does, it removes class 'accordion-open'
+                          - If it doesn't, it:
+                              - Removes class 'accordion-open' from all containers
+                              - Adds class 'accordion-open' to this container
+                              - Shows accordion content
+                              - Rotates accordion icon 180deg
+              */
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "planical-modern-template",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.18.2",
+    "mysql": "^2.18.1",
+    "parcel-bundler": "^1.6.1",
+    "save": "^2.9.0"
+  },
+  "scripts": {}
+}
